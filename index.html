@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══════════════════════════════════════════════
+       EDIT: Page title and meta description
+  ══════════════════════════════════════════════════ -->
+  <title>Your Name — Portfolio</title>
+  <meta name="description" content="Personal portfolio of Your Name — Designer & Developer." />
+
+  <!-- Open Graph (social sharing previews) -->
+  <meta property="og:title" content="Your Name — Portfolio" />
+  <meta property="og:description" content="Personal portfolio of Your Name." />
+  <meta property="og:image" content="assets/og-image.jpg" />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts — change the Google Fonts URL in INSTRUCTIONS.md -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════════════════ -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+
+      <!-- EDIT: Your initials or short name -->
+      <a href="#" class="nav__logo">YN</a>
+
+      <ul class="nav__links">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">◑</button>
+        <button class="nav__hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile menu (auto-populated from nav__links via JS) -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <ul>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════════
+         HERO SECTION
+    ══════════════════════════════════════════════════ -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero__inner">
+
+          <div class="hero__content reveal">
+            <!-- EDIT: Status badge — remove if not needed -->
+            <div class="hero__badge">
+              <span class="badge-dot"></span>
+              Currently based in Oslo, Norway <!-- EDIT: your city -->
+            </div>
+
+            <!-- EDIT: Your name -->
+            <h1 class="hero__name">Your Name</h1>
+
+            <!-- EDIT: Your title / tagline -->
+            <p class="hero__title">Product Designer · Creative Technologist</p>
+
+            <!-- EDIT: Short bio (2–3 sentences) -->
+            <p class="hero__bio">
+              I design simple, thoughtful digital experiences with a strong focus on clarity, usability, and long-term value. I enjoy designing mobile apps and building websites.
+            </p>
+
+            <div class="hero__actions">
+              <!-- EDIT: Link to your resume PDF -->
+              <a href="assets/resume.pdf" class="btn btn--primary" target="_blank" rel="noopener">View Resume</a>
+              <!-- EDIT: Your email -->
+              <a href="mailto:you@email.com" class="btn btn--ghost">Get in touch</a>
+            </div>
+
+            <div class="hero__social">
+              <!-- EDIT: Your social links — remove any you don't use -->
+              <a href="https://twitter.com/yourhandle" class="social-link" target="_blank" rel="noopener">X / Twitter</a>
+              <a href="https://linkedin.com/in/yourprofile" class="social-link" target="_blank" rel="noopener">LinkedIn</a>
+              <a href="https://github.com/yourusername" class="social-link" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+
+          <div class="hero__image reveal reveal--right">
+            <!-- EDIT: Replace with your photo. Recommended: 400×500px, square or portrait -->
+            <img
+              src="assets/avatar.jpg"
+              alt="Your Name"
+              class="hero__avatar"
+              onerror="this.style.display='none'"
+            />
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         PROJECTS SECTION
+    ══════════════════════════════════════════════════ -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section__header reveal">
+          <h2 class="section__label">Projects</h2>
+          <!-- EDIT: Section subtitle -->
+          <p class="section__sub">A selection of projects I've worked on — ranging from client work to personal experiments.</p>
+        </div>
+
+        <div class="projects__grid">
+
+          <!-- ── PROJECT CARD — duplicate this block to add more ── -->
+          <article class="project-card reveal">
+            <div class="project-card__img-wrap">
+              <!-- EDIT: Project image (recommended: 800×500px) -->
+              <img src="assets/project-1.jpg" alt="Project One" onerror="this.parentElement.classList.add('no-img')" />
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__tag">Web Design</span> <!-- EDIT: tag -->
+              <h3 class="project-card__title">Project Title One</h3> <!-- EDIT -->
+              <p class="project-card__desc">A brief description of what this project is about and the problem it solves.</p> <!-- EDIT -->
+              <a href="#" class="project-card__link" target="_blank" rel="noopener">View project →</a> <!-- EDIT: link -->
+            </div>
+          </article>
+          <!-- ── END PROJECT CARD ── -->
+
+          <article class="project-card reveal">
+            <div class="project-card__img-wrap">
+              <img src="assets/project-2.jpg" alt="Project Two" onerror="this.parentElement.classList.add('no-img')" />
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__tag">Mobile App</span>
+              <h3 class="project-card__title">Project Title Two</h3>
+              <p class="project-card__desc">A brief description of what this project is about and the problem it solves.</p>
+              <a href="#" class="project-card__link" target="_blank" rel="noopener">View project →</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card__img-wrap">
+              <img src="assets/project-3.jpg" alt="Project Three" onerror="this.parentElement.classList.add('no-img')" />
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__tag">SaaS</span>
+              <h3 class="project-card__title">Project Title Three</h3>
+              <p class="project-card__desc">A brief description of what this project is about and the problem it solves.</p>
+              <a href="#" class="project-card__link" target="_blank" rel="noopener">View project →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         ABOUT SECTION
+    ══════════════════════════════════════════════════ -->
+    <section class="section section--alt" id="about">
+      <div class="container">
+        <div class="section__header reveal">
+          <h2 class="section__label">About</h2>
+        </div>
+
+        <div class="about__inner">
+          <div class="about__text reveal">
+            <!-- EDIT: Your greeting with your name in italics -->
+            <h3 class="about__greeting">Hello — I'm <em>Your Name.</em></h3>
+
+            <!-- EDIT: Two paragraphs about yourself -->
+            <p>I work at the intersection of design, technology, and problem-solving. My focus is on creating products that feel intuitive, intentional, and easy to use.</p>
+            <p>Outside of work, I'm interested in minimal design and digital products. I enjoy reading books, exploring new tools, walking through cities, and finding inspiration in everyday details.</p>
+
+            <!-- EDIT: A quote you like — or remove this block -->
+            <blockquote class="about__quote">
+              <p>"Nothing is ever finished, only abandoned."</p>
+              <cite>— Paul Valéry</cite>
+            </blockquote>
+          </div>
+
+          <div class="about__images reveal reveal--right">
+            <!-- EDIT: 3 photos — portraits, travel, workspace, etc. -->
+            <img src="assets/about-1.jpg" alt="About photo 1" class="about__img about__img--tall" onerror="this.style.display='none'" />
+            <div class="about__img-col">
+              <img src="assets/about-2.jpg" alt="About photo 2" class="about__img" onerror="this.style.display='none'" />
+              <img src="assets/about-3.jpg" alt="About photo 3" class="about__img" onerror="this.style.display='none'" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         SKILLS SECTION
+    ══════════════════════════════════════════════════ -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section__header reveal">
+          <h2 class="section__label">Skills</h2>
+          <p class="section__sub">My skills focus on designing and building clear, usable digital products.</p>
+        </div>
+
+        <div class="skills__grid">
+
+          <!-- ── SKILL GROUP — duplicate to add more ── -->
+          <div class="skill-group reveal">
+            <h3 class="skill-group__title">Strategy</h3> <!-- EDIT: group name -->
+            <ul class="skill-group__list">
+              <!-- EDIT: add/remove skills -->
+              <li>Problem framing</li>
+              <li>User research</li>
+              <li>Product thinking</li>
+              <li>Roadmapping</li>
+            </ul>
+          </div>
+
+          <div class="skill-group reveal">
+            <h3 class="skill-group__title">Design</h3>
+            <ul class="skill-group__list">
+              <li>Product design</li>
+              <li>UX &amp; UI</li>
+              <li>Design systems</li>
+              <li>Prototyping</li>
+            </ul>
+          </div>
+
+          <div class="skill-group reveal">
+            <h3 class="skill-group__title">Stack</h3>
+            <ul class="skill-group__list">
+              <li>Figma</li>
+              <li>HTML / CSS / JS</li>
+              <li>React</li>
+              <li>Framer</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         EXPERIENCE SECTION
+    ══════════════════════════════════════════════════ -->
+    <section class="section section--alt" id="experience">
+      <div class="container">
+        <div class="section__header reveal">
+          <h2 class="section__label">Experience</h2>
+          <p class="section__sub">I've worked on a range of digital products, from early concepts to shipped experiences.</p>
+        </div>
+
+        <div class="experience__list">
+
+          <!-- ── EXPERIENCE ITEM — duplicate to add more ── -->
+          <div class="experience__item reveal">
+            <span class="experience__period">2023 — Present</span> <!-- EDIT -->
+            <div class="experience__details">
+              <h3 class="experience__role">Web Designer</h3> <!-- EDIT -->
+              <p class="experience__company">Company Name</p> <!-- EDIT -->
+              <p class="experience__desc">Designing websites and digital products for startups and growing teams.</p> <!-- EDIT -->
+            </div>
+          </div>
+
+          <div class="experience__item reveal">
+            <span class="experience__period">2022 — 2023</span>
+            <div class="experience__details">
+              <h3 class="experience__role">Product Designer</h3>
+              <p class="experience__company">Another Company</p>
+              <p class="experience__desc">Worked on product design, UI/UX for a B2B SaaS platform serving 10k+ users.</p>
+            </div>
+          </div>
+
+          <div class="experience__item reveal">
+            <span class="experience__period">2021 — 2022</span>
+            <div class="experience__details">
+              <h3 class="experience__role">UI Designer</h3>
+              <p class="experience__company">Design Agency</p>
+              <p class="experience__desc">First design role at a small creative agency, working on branding and web projects.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         TESTIMONIALS SECTION
+    ══════════════════════════════════════════════════ -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="section__header reveal">
+          <h2 class="section__label">Testimonials</h2>
+          <p class="section__sub">A few words from people I've worked with.</p>
+        </div>
+
+        <div class="testimonials__grid">
+
+          <!-- ── TESTIMONIAL CARD — duplicate to add more ── -->
+          <div class="testimonial-card reveal">
+            <p class="testimonial-card__quote">"Working together was a smooth and thoughtful process. They quickly understood the problem, communicated clearly, and delivered clean, well-structured work."</p> <!-- EDIT -->
+            <div class="testimonial-card__author">
+              <!-- EDIT: small headshot ~80×80px, or remove img if unavailable -->
+              <img src="assets/testimonial-1.jpg" alt="Jan Darsen" class="testimonial-card__avatar" onerror="this.style.display='none'" />
+              <div>
+                <strong>Jan Darsen</strong> <!-- EDIT -->
+                <span>Product Manager</span> <!-- EDIT -->
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal">
+            <p class="testimonial-card__quote">"Brings clarity to every project. Attention to detail and a calm approach made collaboration easy. Really impressed with the outcome."</p>
+            <div class="testimonial-card__author">
+              <img src="assets/testimonial-2.jpg" alt="Daniel Mack" class="testimonial-card__avatar" onerror="this.style.display='none'" />
+              <div>
+                <strong>Daniel Mack</strong>
+                <span>Founder — Acme Inc.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal">
+            <p class="testimonial-card__quote">"What stood out most was their ability to simplify complex ideas into intuitive interfaces. The work felt intentional, practical, and well thought out."</p>
+            <div class="testimonial-card__author">
+              <img src="assets/testimonial-3.jpg" alt="Max Dev" class="testimonial-card__avatar" onerror="this.style.display='none'" />
+              <div>
+                <strong>Max Dev</strong>
+                <span>Senior Developer</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         CONTACT SECTION
+         See INSTRUCTIONS.md to wire up real form submission
+    ══════════════════════════════════════════════════ -->
+    <section class="section section--alt" id="contact">
+      <div class="container">
+        <div class="section__header reveal">
+          <h2 class="section__label">Contact</h2>
+          <!-- EDIT: subtitle -->
+          <p class="section__sub">If you'd like to work together, have a question, or just want to say hello — reach out.</p>
+        </div>
+
+        <!--
+          To make this form actually send emails:
+          Option A (Netlify): add  data-netlify="true"  to the <form> tag — done!
+          Option B (Formspree): change action="https://formspree.io/f/YOUR_ID"
+          See INSTRUCTIONS.md for full details.
+        -->
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contact-name">Name</label>
+              <input type="text" id="contact-name" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Email</label>
+              <input type="email" id="contact-email" name="email" placeholder="your@email.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" rows="5" placeholder="Your message…" required></textarea>
+          </div>
+          <div class="form-footer">
+            <button type="submit" class="btn btn--primary" id="submitBtn">Send message</button>
+            <p class="form-status" id="formStatus" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <!-- EDIT: your name -->
+        <p class="footer__copy">© <span id="year"></span> · Your Name</p>
+        <div class="footer__links">
+          <!-- EDIT: your links -->
+          <a href="mailto:you@email.com">Email</a>
+          <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener">Twitter</a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
